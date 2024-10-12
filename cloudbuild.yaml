@@ -1,7 +1,5 @@
-options:
-  env:
-  - DOCKER_BUILDKIT=1
-
 steps:
 - name: 'docker'
   args: ['build', '-t', 'gcr.io/$REPO_NAME/$BRANCH_NAME:$SHORT_SHA', '.']
+  env:
+  - DOCKER_BUILDKIT=1
